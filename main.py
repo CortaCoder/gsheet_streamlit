@@ -33,11 +33,14 @@ rows = ["Enter a sheet url to get started",]
 
 if submit:
     rows = run_query(f'SELECT * FROM "{sheet_url}"')
+    Keys = rows[0].keys()
 
 
 st.write("<hr>",unsafe_allow_html=True)
 # Print results.
 if len(rows)>1:
+    df_sheet = pd.read_json(rows)
+    st.write(df_sheet)
     for row in rows:
         st.write(row)
         # st.write(f"Log folder - {row.folder_name} has a file '{row.file_name}'")
