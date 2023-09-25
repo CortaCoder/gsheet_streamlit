@@ -41,7 +41,7 @@ if submit:
 st.write("<hr>",unsafe_allow_html=True)
 # Print results.
 if len(rows)>1:
-    df_sheet = pd.read_json(rows, orient = 'index')
+    df_sheet = pd.DataFrame.from_dict(rows, orient = 'index')
     st.write(df_sheet)
     st.write(rows)
     # for row in rows:
