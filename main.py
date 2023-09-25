@@ -44,7 +44,7 @@ if len(rows)>1:
     st.write(type(rows))
     df_sheet = json_normalize(rows)
     st.write(df_sheet)
-    print(rows)
+    st.write(rows)
     # for row in rows:
     #     st.write(row)
         # st.write(f"Log folder - {row.folder_name} has a file '{row.file_name}'")
