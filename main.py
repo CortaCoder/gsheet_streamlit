@@ -41,11 +41,11 @@ if submit:
 st.write("<hr>",unsafe_allow_html=True)
 # Print results.
 if len(rows)>1:
-    df_sheet = pd.json_normalize(rows)
-    st.write(df_sheet)
+    # df_sheet = pd.json_normalize(rows)
+    # st.write(df_sheet)
     st.write(rows)
-    # for row in rows:
-    #     st.write(row)
-        # st.write(f"Log folder - {row.folder_name} has a file '{row.file_name}'")
+    for row in rows:
+        st.write(row)
+        st.write(f"Log folder - {row.folder_name} has a file '{row.file_name}'")
 else:
     st.write(rows[0])
