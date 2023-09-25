@@ -29,6 +29,6 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 # Print results.
 if len(rows)>1:
     for row in rows:
-        st.write(f"Log folder - {row.folder_name} has a file :{row.file_name}:")
+        st.write(f"Log folder - {row.folder_name} has a file '{row.file_name}'")
 else:
     st.write(rows[0])
