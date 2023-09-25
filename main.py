@@ -31,4 +31,4 @@ if len(rows)>1:
     for row in rows:
         st.write(f"Log folder - {row.folder_name} has a file :{row.file_name}:")
 else:
-    st.write(rows[0)
+    st.write(rows[0])
