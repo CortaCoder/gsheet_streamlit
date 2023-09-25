@@ -33,7 +33,7 @@ rows = ["Enter a sheet url to get started",]
 
 if submit:
     rows = run_query(f'SELECT * FROM "{sheet_url}"')
-    Keys = rows[0].keys()
+    # Keys = rows[0].keys()
 
 
 st.write("<hr>",unsafe_allow_html=True)
