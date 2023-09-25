@@ -22,10 +22,20 @@ def run_query(query):
         return [str(e),]
     return rows
 
-sheet_url = st.secrets["private_gsheets_url"]
-print(sheet_url)
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
+st.header("Import Google Sheet Data")
+st.write("Give 'gstreamli@streamlitsheetdemo.iam.gserviceaccount.com' viewer access to your google sheet to get started")
 
+gsheet_form = st.form("gsheet_apply")
+sheet_url = gsheet_form.text_input("Google Sheet URL")
+submit = gsheet_form.form_submit_button()
+
+rows = ["Enter a sheet url to get started",]
+
+if submit:
+    rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+
+st.write("<hr>",unsafe_allow_html=True)
 # Print results.
 if len(rows)>1:
     for row in rows:
