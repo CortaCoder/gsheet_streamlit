@@ -1,6 +1,6 @@
 from google.oauth2 import service_account
 from gsheetsdb import connect
-from pandas.io.json import json_normalize
+from pandas import json_normalize
 import pandas as pd
 import streamlit as st
 
